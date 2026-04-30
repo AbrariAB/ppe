@@ -18,6 +18,7 @@
             <option>--enable-native-access=ALL-UNNAMED</option>
             <option>--enable-native-access=javafx.graphics</option>
             <option>--enable-native-access=javafx.media</option>
+            <option>--add-opens=javafx.base/com.sun.javafx=ALL-UNNAMED</option>
           </options>
         </configuration>
       </plugin>
@@ -52,15 +53,6 @@
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
-      </plugin>
-      <plugin>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.6.3</version>
-        <configuration>
-          <bottom>&lt;div style="text-align:center;"&gt;
-                        © 2026 AB - Projet Mnemo. Tous droits réservés.
-                    &lt;/div&gt;</bottom>
-        </configuration>
       </plugin>
     </plugins>
   </build>
@@ -118,7 +110,7 @@
     <repository>
       <id>github</id>
       <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/OWNER/REPOSITORY</url>
+      <url>https://maven.pkg.github.com/AbrariAB/ppe</url>
     </repository>
   </distributionManagement>
   <properties>

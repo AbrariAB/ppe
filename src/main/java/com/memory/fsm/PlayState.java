@@ -46,7 +46,6 @@ public class PlayState
     private final FxCoordinator fxCore;
 
     private Player player;
-    private AudioService audio;
 
     private GameLifecycleModule lifecycleModule;
     private MenuModule menuModule;
@@ -103,8 +102,7 @@ public class PlayState
         this.hud = hud;
         this.ui = new UIManager(root, gameContainer, grid, hud);
         this.fx = new AnimationManager(new NiceFX());
-        this.audio = AudioService.getInstance();
-        this.fxCore = new FxCoordinator(fx,audio);
+        this.fxCore = new FxCoordinator(fx);
         this.turnManager = new TurnManager(game, hud, fx, fxCore);
         this.timer = new TimerService();
         this.flow = new GameFlow(game, fsm, ui, hud, timer, turnManager, fxCore);

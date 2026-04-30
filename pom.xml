@@ -185,6 +185,7 @@
             <option>--enable-native-access=ALL-UNNAMED</option>
             <option>--enable-native-access=javafx.graphics</option>
             <option>--enable-native-access=javafx.media</option>
+            <option>--add-opens=javafx.base/com.sun.javafx=ALL-UNNAMED</option>
           </options>
       </configuration>
     </plugin>

@@ -2,7 +2,6 @@ package com.memory.animation;
 
 import java.util.List;
 
-import com.memory.service.AudioService;
 import com.memory.ui.UIManager;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -25,7 +24,6 @@ import javafx.scene.layout.StackPane;
 public class FxCoordinator 
 {
     private final AnimationManager fx;
-    private final AudioService audio;
 
     /*********************************************************
      * Initialise le coordinateur.
@@ -34,10 +32,9 @@ public class FxCoordinator
      * @param audio gestionnaire d’effets sonores (non null)
      * @throws NullPointerException si {@code fx} est null
      *********************************************************/
-    public FxCoordinator(AnimationManager fx, AudioService audio) 
+    public FxCoordinator(AnimationManager fx) 
     {
         this.fx = fx;
-        this.audio = audio;
     }
 
     /*****************************************************************
@@ -233,6 +230,5 @@ public class FxCoordinator
 
     public AnimationManager getFx() {return fx;}
 
-    public AudioService getAudio() {return audio;}
 
 }
