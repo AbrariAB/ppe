@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.memory.controller.GameController"
+            fx:id="root"
+            stylesheets="@../css/style.css">
+
+    <!-- TOP BAR -->
+    <top>
+        <VBox>
+
+            <!-- MENU -->
+            <MenuBar fx:id="menuBar">
+                <menus>
+
+                    <Menu text="Partie">
+                        <MenuItem text="Nouvelle partie" onAction="#restartGame"/>
+                        <MenuItem text="Mode Hardcore" onAction="#startHardcoreMode"/>
+                        <SeparatorMenuItem/>
+                        <MenuItem text="Quitter" onAction="#exitGame"/>
+                    </Menu>
+
+                    <Menu text="Infos">
+                        <MenuItem text="Règles du jeu" onAction="#openRules"/>
+                    </Menu>
+
+                </menus>
+            </MenuBar>
+
+            <!-- GAME PLAYER OPTIONS -->
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </padding>
+
+                <!-- PLAYER -->
+                <Label>
+                    <graphic>
+                        <HBox spacing="20" alignment="CENTER" styleClass="player-button">
+
+                            <FontAwesomeIconView fx:id="playerIcon" size="20"/>
+
+                            <VBox spacing="5" alignment="CENTER_LEFT">
+
+                                <Label fx:id="playerName" styleClass="pn"/>
+
+                                <StackPane>
+                                    <ProgressBar fx:id="levelProgressBar"
+                                                 prefWidth="180"
+                                                 prefHeight="10"
+                                                 styleClass="level-bar"/>
+
+                                    <Label fx:id="levelLabel"
+                                           styleClass="level-text"/>
+                                    </StackPane>
+
+                                </VBox>
+
+                            </HBox>
+                        </graphic>
+                    </Label>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <HBox fx:id="topUIContainer" spacing="15" alignment="CENTER_RIGHT">
+
+                        <Label fx:id="scoreLabel" styleClass="bonus"/>
+
+                        <ComboBox fx:id="difficultyComboBox" prefWidth="130"/>
+                        <ComboBox fx:id="providerComboBox" prefWidth="150"/>
+                        <ComboBox fx:id="themeComboBox" prefWidth="150"/>
+
+                        <Label fx:id="timerLabel" styleClass="timer"/>
+
+                    </HBox>
+                </HBox>
+
+            </VBox>
+        </top>
+
+    <!-- CENTER GRID -->
+    <center>
+        <StackPane fx:id="gameContainer">
+
+            <ScrollPane fx:id="scrollPane"
+                        fitToWidth="true"
+                        fitToHeight="true"
+                        pannable="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="NEVER"
+                        styleClass="game-scroll">
+
+                    <StackPane alignment="CENTER">
+                        <GridPane fx:id="grid"
+                                alignment="CENTER"
+                                styleClass="game-grid"
+                                hgap="12"
+                                vgap="12"/>
+                    </StackPane>
+                </ScrollPane>
+
+
+                <!-- LAYER UI -->
+                <StackPane fx:id="fxLayer" mouseTransparent="true"/>
+
+                <!-- TOUJOURS AU-DESSUS -->
+                <Label fx:id="hintLabel"
+                       text="Clic droit pour masquer l’interface"
+                       styleClass="hint"
+                       opacity="0"
+                       StackPane.alignment="BOTTOM_CENTER"
+                       translateY="-20"/>
+
+            </StackPane>
+        </center>
+
+        <!-- BOTTOM BUTTONS -->
+            <bottom>
+                <HBox fx:id="bottomUIContainer" alignment="CENTER" spacing="10">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10"/>
+                    </padding>
+
+                    <!--  PLAY/PAUSE -->
+                    <Button onAction="#resumeGame" prefWidth="120" styleClass="play-button">
+                        <graphic>
+                            <HBox spacing="9" alignment="CENTER">
+                                <FontAwesomeIconView glyphName="PLAY"  size="16"/>
+                                <Label text="Play"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+
+                    <Button onAction="#pauseGame" prefWidth="120" styleClass="pause-button">
+                        <graphic>
+                            <HBox spacing="9" alignment="CENTER">
+                                <FontAwesomeIconView glyphName="PAUSE"  size="16"/>
+                                <Label text="Pause"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+
+
+<!--                     RESTART -->
+                    <Button onAction="#restartGame" fx:id="reset" styleClass="newgame-button">
+                        <graphic>
+                            <HBox spacing="9" alignment="CENTER">
+                                <FontAwesomeIconView glyphName="REPEAT" size="18"/>
+                                <Label text="New Game"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+
+<!--                     HARDCORE -->
+                    <Button onAction="#startHardcoreMode" styleClass="hardcore-button">
+                        <graphic>
+                            <HBox spacing="9" alignment="CENTER">
+                                <FontAwesomeIconView glyphName="FIRE" size="18"/>
+                                <Label text="Hardcore Mode"/>
+                            </HBox>
+                        </graphic>
+                    </Button>
+
+<!--                     HISTORY -->
+                    <Button onAction="#openRanking" styleClass="history-button">
+                        <graphic>
+                            <HBox spacing="9" alignment="CENTER">
+                                <FontAwesomeIconView glyphName="LIST" size="18"/>
+                                <Label text="Ranking"/>
+                            </HBox>
+                        </graphic>
+                       <!-- <tooltip>
+                            <Tooltip text="History"/>
+                        </tooltip>-->
+                    </Button>
+
+
+                    </HBox>
+                </bottom>
+
+        </BorderPane>

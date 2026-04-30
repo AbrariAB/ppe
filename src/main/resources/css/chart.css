@@ -1,0 +1,182 @@
+/* ============================= */
+/*              GLOBAL           */
+/* ============================= */
+.root 
+{
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+    -fx-text-fill: #60a5fa;
+
+
+    -fx-background-image: url("/assets/chart/chart_bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*           TOP BAR             */
+/* ============================= */
+HBox 
+{
+    -fx-padding: 10;
+}
+
+Label 
+{
+    -fx-text-fill: #60a5fa;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* ============================= */
+/*           COMBOBOX            */
+/* ============================= */
+.combo-box,
+.combo-box-base 
+{
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1;
+
+    -fx-text-fill: #60a5fa;
+}
+
+/* Texte affiché */
+.combo-box .list-cell 
+{
+    -fx-text-fill: #60a5fa;
+    -fx-background-color: transparent;
+}
+
+/* Flèche */
+.combo-box .arrow 
+{
+    -fx-background-color: #60a5fa;
+}
+
+/* ===================== LISTE DÉROULANTE ===================== */
+.combo-box-popup .list-view 
+{
+    -fx-background-color: rgba(15, 23, 42, 0.85);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Items */
+.combo-box-popup .list-cell 
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: #60a5fa;
+}
+
+/* Hover item */
+.combo-box-popup .list-cell:hover 
+{
+    -fx-background-color: rgba(59, 130, 246, 0.35);
+    -fx-text-fill: white;
+}
+
+/* Selected item */
+.combo-box-popup .list-cell:selected 
+{
+    -fx-background-color: rgba(96, 165, 250, 0.25);
+    -fx-text-fill: white;
+}
+
+/* ============================= */
+/*           BAR CHART           */
+/* ============================= */
+.chart 
+{
+    -fx-padding: 20;
+    -fx-background-color: transparent;
+}
+
+/* Fond du plot */
+.chart-plot-background 
+{
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-background-radius: 12;
+}
+
+/* Axes */
+.axis 
+{
+    -fx-tick-label-fill: #60a5fa;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.axis-label 
+{
+    -fx-text-fill: #60a5fa;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+/* Grilles */
+.chart-horizontal-grid-lines,
+.chart-vertical-grid-lines 
+{
+    -fx-stroke: rgba(255,255,255,0.15);
+}
+
+/* ===================== BARRES ===================== */
+.default-color0.chart-bar 
+{
+    -fx-bar-fill: #3b82f6;
+}
+
+.default-color1.chart-bar 
+{
+    -fx-bar-fill: #10b981;
+}
+
+.default-color2.chart-bar 
+{
+    -fx-bar-fill: #facc15;
+}
+
+.default-color3.chart-bar 
+{
+    -fx-bar-fill: #ec4899;
+}
+
+/* ============================= */
+/*           BOUTON              */
+/* ============================= */
+.btn 
+{
+    -fx-background-color: linear-gradient(to right, #3b82f6, #6366f1);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 999px;
+    -fx-border-radius: 999px;
+
+    -fx-padding: 12 32;
+    -fx-cursor: hand;
+
+    -fx-pref-width: 180px;
+    -fx-max-width: 260px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 8, 0.25, 0, 3);
+}
+
+.btn:hover 
+{
+    -fx-background-color: linear-gradient(to right, #2563eb, #4f46e5);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.btn:pressed 
+{
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: linear-gradient(to right, #1e40af, #4338ca);
+}

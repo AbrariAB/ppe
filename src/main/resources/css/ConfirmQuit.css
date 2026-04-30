@@ -1,0 +1,85 @@
+/* ============================= */
+/*        GLOBAL                 */
+/* ============================= */
+.root 
+{
+    -fx-background-color: linear-gradient(to bottom, #1e1e2f, #2c2c54);
+    -fx-padding: 30;
+
+    -fx-background-image: url("/assets/bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow(gaussian, black, 30, 0.5, 0, 10);
+}
+
+/* ============================= */
+/*            TITRE              */
+/* ============================= */
+.title 
+{
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ============================= */
+/*            TEXTE              */
+/* ============================= */
+.text 
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: #f1f2f6;
+    -fx-wrap-text: true;
+}
+
+/* ============================= */
+/*            BOUTONS            */
+/* ============================= */
+.btn 
+{
+    -fx-background-color: #2ed573;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn:hover 
+{
+    -fx-background-color: #26c281;
+}
+
+/* Bouton danger (Quitter) */
+.btn-danger 
+{
+    -fx-background-color: #ff4757;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 25;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover 
+{
+    -fx-background-color: #e84118;
+}
+
+/* ============================= */
+/*        CONTAINER GLOBAL       */
+/* ============================= */
+.vbox 
+{
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}
+
+.hbox 
+{
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}

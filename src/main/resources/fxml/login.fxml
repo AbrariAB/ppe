@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.memory.controller.LoginController"
+      prefWidth="700.0" prefHeight="960.0"
+      stylesheets="@../css/login.css"
+      alignment="CENTER"
+      spacing="20"
+      styleClass="hud">
+
+    <Label text="Bienvenue !" styleClass="loginTitle"/>
+
+    <TextField fx:id="nameField" promptText="Votre nom" />
+
+<!--     <ComboBox fx:id="iconCombo"> -->
+        <!-- List of FontAwesomeIcon names -->
+<!--     </ComboBox> -->
+
+    <Button text="Jouer" onAction="#startGame" styleClass="loginButton"/>
+    <Button text="Historique des parties" onAction="#openHistory" styleClass="loginBox"/>
+</VBox>

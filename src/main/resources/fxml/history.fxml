@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.memory.controller.HistoryController"
+            prefWidth="700.0" prefHeight="700.0"
+            stylesheets="@../css/history.css">
+
+        <top>
+            <VBox spacing="15">
+
+                <Label text="Historique des parties" styleClass="title"/>
+
+                <HBox spacing="15" alignment="CENTER_LEFT">
+
+                    <!-- Search bar -->
+                    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="search-container" HBox.hgrow="ALWAYS">
+
+                        <FontAwesomeIconView glyphName="SEARCH" size="18" styleClass="search-icon"/>
+
+                        <TextField fx:id="searchField"
+                                   promptText="Rechercher (joueur, score, niveau, bonus, date...)"
+                                   styleClass="search-field"
+                                   HBox.hgrow="ALWAYS"/>
+                        </HBox>
+
+                    </HBox>
+
+                </VBox>
+            </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <TableView fx:id="table" styleClass="tableau" prefWidth="700.0" prefHeight="500.0">
+                    <columns>
+                        <TableColumn fx:id="colName" text="Joueur"/>
+                        <TableColumn fx:id="colScore" text="Score"/>
+                        <TableColumn fx:id="colLevel" text="Niveau"/>
+<!--                         <TableColumn fx:id="colTime" text="Temps restant"/> -->
+                        <TableColumn fx:id="colBonus" text="Bonus"/>
+                        <TableColumn fx:id="colRank" text="Rang"/>
+                        <TableColumn fx:id="colDate" text="Date"/>
+                    </columns>
+                </TableView>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <bottom>
+        <Button text="Voir Classement" onAction="#openChart" styleClass="btn"/>
+    </bottom>
+
+</BorderPane>

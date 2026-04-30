@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+
+<VBox spacing="20" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.memory.controller.VictoryController"
+      stylesheets="@../css/victory.css"
+      prefWidth="500.0"
+      prefHeight="300.0"
+      styleClass="root">
+
+    <Label text="✨ VICTORY ✨ " styleClass="title"/>
+
+    <HBox spacing="10" alignment="CENTER" styleClass="player-box">
+        <FontAwesomeIconView fx:id="playerIcon" glyphName="USER" size="28"/>
+        <Label fx:id="playerLabel" styleClass="text"/>
+    </HBox>
+
+    <VBox spacing="10" alignment="CENTER" styleClass="score-box">
+        <Label fx:id="scoreLabel" styleClass="text"/>
+        <Label fx:id="timeLabel" styleClass="text"/>
+        <Label fx:id="rankLabel" styleClass="text"/>
+    </VBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Rejouer" onAction="#onReplay" styleClass="btn"/>
+        <Button text="Quitter" onAction="#onQuit" styleClass="btn-danger"/>
+    </HBox>
+
+</VBox>

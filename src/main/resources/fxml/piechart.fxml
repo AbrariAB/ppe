@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+
+<StackPane fx:id="chartContainer"
+           xmlns="http://javafx.com/javafx/25.0.2"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.memory.controller.PieChartController"
+           prefWidth="800.0"
+           prefHeight="700.0"
+           stylesheets="@../css/pie.css">
+
+    <!-- ROOT LAYOUT -->
+    <HBox spacing="30" alignment="CENTER">
+
+        <!-- LEFT PANEL (overlay + button) -->
+        <VBox fx:id="leftBox"
+              spacing="10"
+              alignment="CENTER_LEFT">
+
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Overlay dynamique -->
+            <VBox fx:id="overlayBox" spacing="8"/>
+
+            <!-- Bouton fermer -->
+<!--            <Button fx:id="closeButton"
+                    text="Fermer"
+                    onAction="#handleClose"
+                    style="-fx-background-color: #d9534f; -fx-text-fill: white;" />-->
+
+        </VBox>
+
+        <!-- RIGHT PANEL (charts) -->
+        <VBox spacing="20" alignment="CENTER">
+
+            <PieChart fx:id="scorePieChart" prefWidth="300"/>
+
+            <LineChart fx:id="timeLineChart" prefWidth="400" prefHeight="250">
+
+                <xAxis>
+                    <CategoryAxis label="Date"/>
+                </xAxis>
+
+                <yAxis>
+                    <NumberAxis fx:id="yAxis" label="Temps"/>
+                </yAxis>
+
+            </LineChart>
+
+        </VBox>
+
+    </HBox>
+
+</StackPane>

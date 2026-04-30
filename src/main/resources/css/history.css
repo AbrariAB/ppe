@@ -1,0 +1,200 @@
+/* ============================= */
+/*           GLOBAL              */
+/* ============================= */
+.root 
+{
+    -fx-font-family: "Inter", "Segoe UI", "Helvetica Neue", sans-serif;
+    -fx-padding: 20;
+
+    -fx-background-image: url("/assets/chart/chart_bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*               TITRE           */
+/* ============================= */
+.title 
+{
+    -fx-text-fill: linear-gradient(to right, #3b82f6, #a855f7);
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-padding: 15 0 25 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 6, 0.2, 0, 2);
+}
+
+/* ============================= */
+/*           TABLEVIEW           */
+/* ============================= */
+.tableau 
+{
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 10;
+}
+
+/* Lignes alternées */
+.table-row-cell:odd 
+{
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+.table-row-cell:even 
+{
+    -fx-background-color: rgba(255,255,255,0.18);
+}
+
+/* Texte des cellules */
+.table-row-cell .table-cell 
+{
+    -fx-text-fill: white;
+}
+
+/* Hover */
+.table-row-cell:hover 
+{
+    -fx-background-color: rgba(99,102,241,0.45);
+}
+
+/* ============================= */
+/*       HEADERS TABLE           */
+/* ============================= */
+
+/* Header général */
+.table-column-header 
+{
+    -fx-background-color: #000000;
+    -fx-text-fill: #9ca3af; 
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER;
+    -fx-border-color: transparent;
+    -fx-padding: 6 12;
+}
+
+.column-header .label 
+{
+    -fx-text-fill: #9ca3af;
+    -fx-font-weight: bold;
+}
+
+/* ============================= */
+/*           COLONNES            */
+/* ============================= */
+
+/* Joueur */
+#colName .column-header .label 
+{
+-fx-text-fill: #9ca3af;
+}
+
+/* Score */
+#colScore .column-header .label 
+{
+-fx-text-fill: #9ca3af;
+}
+
+/* Niveau */
+#colLevel .column-header .label 
+{
+-fx-text-fill: #9ca3af;
+}
+
+/* Temps */
+#colTime .column-header .label 
+{
+-fx-text-fill: #9ca3af;
+}
+
+/* Date */
+#colDate .column-header .label 
+{
+-fx-text-fill: #9ca3af;
+}
+
+/* ============================= */
+/*           SCROLLPANE          */
+/* ============================= */
+.scroll-pane 
+{
+    -fx-background: transparent;
+    -fx-background-color: rgba(255,255,255,0.08);
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+}
+
+/* ============================= */
+/*           BOUTON              */
+/* ============================= */
+.btn 
+{
+    -fx-background-color: linear-gradient(to right, #3b82f6, #6366f1);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 999px;
+    -fx-border-radius: 999px;
+
+    -fx-padding: 12 32;
+    -fx-cursor: hand;
+
+    -fx-pref-width: 180px;
+    -fx-max-width: 260px;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.45), 8, 0.25, 0, 3);
+}
+
+.btn:hover 
+{
+    -fx-background-color: linear-gradient(to right, #2563eb, #4f46e5);
+    -fx-scale-x: 1.06;
+    -fx-scale-y: 1.06;
+}
+
+.btn:pressed 
+{
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: linear-gradient(to right, #1e40af, #4338ca);
+}
+
+/* ============================= */
+/*           SEARCH BAR          */
+/* ============================= */
+.search-container 
+{
+    -fx-background-color: rgba(255, 255, 255, 0.12);
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1.2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+
+    -fx-padding: 8 14;
+
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0.2, 0, 2);
+}
+
+.search-field 
+{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: rgba(255,255,255,0.5);
+    -fx-font-size: 14px;
+}
+
+.search-icon 
+{
+    -fx-fill: #3b82f6;
+}
+
+.search-container:focused-within 
+{
+    -fx-border-color: #6366f1;
+    -fx-effect: dropshadow(gaussian, rgba(99,102,241,0.6), 10, 0.3, 0, 0);
+}

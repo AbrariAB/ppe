@@ -1,0 +1,84 @@
+/* ============================= */
+/*           GLOBAL              */
+/* ============================= */
+.root 
+{
+    -fx-background-color: linear-gradient(to bottom, #1e1e2f, #2c2c54);
+    -fx-padding: 30;
+
+    -fx-background-image: url("/assets/bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* ============================= */
+/*              Titre            */
+/* ============================= */
+.title 
+{
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ============================= */
+/*          Joueur               */
+/* ============================= */
+.player-box 
+{
+    -fx-alignment: center;
+}
+
+.glyph-icon 
+{
+    -fx-fill: #ffd32a;
+    -fx-effect: dropshadow(gaussian, black, 6, 0.6, 0, 0);
+}
+
+/* ============================= */
+/*          Score box            */
+/* ============================= */
+.score-box 
+{
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-padding: 20;
+    -fx-background-radius: 15;
+}
+
+.text 
+{
+    -fx-font-size: 18px;
+    -fx-text-fill: #f1f2f6;
+}
+
+/* ============================= */
+/*          Boutons              */
+/* ============================= */
+.btn 
+{
+    -fx-background-color: #2ed573;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 10;
+}
+
+.btn:hover 
+{
+    -fx-background-color: #26c281;
+}
+
+.btn-danger 
+{
+    -fx-background-color: #ff4757;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 10;
+}
+
+.btn-danger:hover 
+{
+    -fx-background-color: #e84118;
+}

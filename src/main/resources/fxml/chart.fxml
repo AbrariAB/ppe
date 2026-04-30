@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.memory.controller.ChartController"
+            prefWidth="900.0" prefHeight="600.0"
+            stylesheets="@../css/chart.css">
+
+    <top>
+        <HBox spacing="10" style="-fx-padding:10;">
+            <Label text="Sélectionnez un joueur:"/>
+            <ComboBox fx:id="playerComboBox" promptText="Joueur"/>
+            <ComboBox fx:id="dateComboBox" promptText="Choisir une date"/>
+        </HBox>
+    </top>
+
+    <center>
+        <BarChart fx:id="barChart" prefWidth="700.0" prefHeight="500.0">
+            <xAxis>
+                <!-- Axe X = joueurs -->
+                <CategoryAxis fx:id="xAxis" label="Joueurs"/>
+            </xAxis>
+            <yAxis>
+                <!-- Axe Y = score -->
+                <NumberAxis fx:id="yAxis" label="Score"/>
+            </yAxis>
+        </BarChart>
+    </center>
+
+    <bottom>
+        <Button text="Stats" onAction="#openPieChart" styleClass="btn"/>
+    </bottom>
+
+</BorderPane>

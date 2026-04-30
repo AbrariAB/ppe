@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.memory.controller.RulesController"
+            prefWidth="500"
+            prefHeight="400"
+            stylesheets="@../css/rules.css">
+
+    <!-- TITLE -->
+    <top>
+        <Label text="Règles"
+               style="-fx-font-size:18px; -fx-padding:10;"/>
+    </top>
+
+    <!-- CONTENT -->
+    <center>
+        <ScrollPane fitToWidth="true">
+            <content>
+                <VBox>
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+
+                    <Label wrapText="true"
+                            text="Le but du jeu est de retrouver toutes les paires de cartes identiques."/>
+
+                    <Label wrapText="true"
+                            text="À chaque tour, vous pouvez retourner deux cartes."/>
+
+                    <Label wrapText="true"
+                            text="Si les cartes correspondent, elles restent visibles."/>
+
+                    <Label wrapText="true"
+                            text="Sinon, elles se retournent à nouveau."/>
+
+                    <Label wrapText="true"
+                            text="Plus vous enchaînez de bonnes paires, plus votre combo augmente."/>
+
+                    <Label wrapText="true"
+                            text="Le score dépend des paires trouvées, du combo et du temps restant."/>
+
+                    <Label wrapText="true"
+                            text="Mode Hardcore : pas de limite de temps, mais difficulté maximale."/>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Button text="Fermer" onAction="#close"/>
+
+            <Label text="© 2019 Mnemo - Tous droits réservés"
+                    style="-fx-font-size:11px; -fx-text-fill:rgba(255,255,255,0.6);"/>
+
+            <Label text="Développé par : Louperger"
+                    style="-fx-font-size:10px; -fx-text-fill:rgba(255,255,255,0.4);"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
